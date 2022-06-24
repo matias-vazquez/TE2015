@@ -1,9 +1,8 @@
-<table width="100%">
+<table width="100%" cellspacing="0" cellpadding="0">
   <tr>
     <td align="left"><h1><b>TE2015 Microcontroladores</b></h1></td>
     <td align="right"><img src="../img/teclogo.png" height="50"/></td>
   </tr>
-
 </table>
 
 ## **Laboratory 2. PIC18 and MPLAB basics**
@@ -164,4 +163,24 @@ Connect RB0 on your Curiosity board to one of the LEDs on your XBR board. Connec
    <img src="img/MyLED.gif">
 </div>
 
+For your referemce. the complete MPLAB BlinkLED project can be found here or as part of the file set of the current folder as ``BlinkLED.X``
+
 ### __Self__
+Now that you know how to create a project and generate the configuration files using MCC, create a project named "KnightRider" and write the C code to drive 8 LEDs to produce the Knight Rider effect.
+
+<div align="center">
+   <a href="https://www.youtube.com/watch?v=0NcW_OzNrfg">
+   <img src="https://img.youtube.com/vi/0NcW_OzNrfg/0.jpg">
+   </a>
+</div>
+
+
+Create one more project called "MustangSeqTurn"
+
+<div align="center">
+   <a href="https://www.youtube.com/watch?v=jIjY7mERBrw">
+   <img src="https://img.youtube.com/vi/jIjY7mERBrw/0.jpg">
+   </a>
+</div>
+
+### __Report__
