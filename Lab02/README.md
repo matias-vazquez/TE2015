@@ -47,8 +47,11 @@ We will use GitHub to keep track of the development progress of our projects. Wi
 1. Create a GitHub account using your institute's e-mail.
 
 2. Install a Github distribution on your computer.
+Install a [Git Distribution](https://git-scm.com/download/win) in your computer.
 
-3. Clone class TE2015 repository on your computer.
+3. Then, install the [GitHub CLI](https://cli.github.com/) to log in using your GitHub account credentials. 
+
+3. Clone TE2015 class repository on your computer.
 ```
 git init
 git add README.md
