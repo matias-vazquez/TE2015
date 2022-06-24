@@ -169,8 +169,8 @@ For your referemce. the complete MPLAB BlinkLED project can be found here or as 
 Now that you know how to create a project and generate the configuration files using MCC, create a project named "KnightRider" and write the C code to drive 8 LEDs to produce the Knight Rider effect.
 
 <div align="center">
-   <a href="https://www.youtube.com/watch?v=0NcW_OzNrfg">
-   <img src="https://img.youtube.com/vi/0NcW_OzNrfg/0.jpg">
+   <a href="https://www.youtube.com/watch?v=NS9FTyXQTmk">
+   <img src="https://img.youtube.com/vi/NS9FTyXQTmk/0.jpg">
    </a>
 </div>
 
