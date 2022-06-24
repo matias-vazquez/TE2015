@@ -12,30 +12,30 @@ Before our lab session it is required that you install the development tools we 
 
 The following three sections will guide you with the installation and setup of all the required tools for our lab; so make sure you properly install everything before our lab session. 
 
-## 1. MPLAB INSTALLATION
+## 1. MPLAB X IDE
 1. Go to https://www.microchip.com/mplab/mplab-x-ide, scroll down to Downloads section and download the latest version of MPLAB X IDE
 2. Install it in your computer.
 
-## 2. XC8 COMPILER INSTALLATION
+## 2. XC8 COMPILER
 Download it and install it from the official [Microchip Compilers website](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers).
 
-## 3. MPLAB'S CODE CONFIGURATOR INSTALLATION
+## 3. MPLAB'S CODE CONFIGURATOR
 
 On MPLAB's upper toolbar you should see the MCC icon. If not, it is necessary to install the plugin. See image below for your reference: 
 <p align="center">
-  <img src="img/MPLAB_bar_MCC.PNG">
+  <img src="img/MPLAB_bar_MCC.png">
 </p>
 
 To install MCC or any other MPLAB plugin, go to Tools → Plugins → Available Plugins, and on the search bar type MCC to search for the plugin. You should see MPLAB Code Configurator listed now. Check the box on the left and click the Install button below to pop up the installer window. 
 
 <p align="center">
-  <img src="img/MCC_plugin_installation.PNG">
+  <img src="img/MCC_plugin_installation.png">
 </p>
 
 Once the installation is done, MPLAB will restart and you should see the Netbeans launching window, meaning MCC was correctly installed. 
 
 <p align="center">
-  <img src="img/netbeans.PNG">
+  <img src="img/netbeans.png">
 </p>
 
 You should see the MCC icon on the MPLAB upper bar now. 
