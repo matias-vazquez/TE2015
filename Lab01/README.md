@@ -1,4 +1,4 @@
-# Project 1: Expansion Board XBR
+# Project 1: Expansion Board XBR-1
 ## DESCRIPTION
 In this project you will design and layout an expansion board with different peripherals that you can use to interface with any microcontroller evaluation board such as Arduino, ESP8266, Raspberry Pi or any other microcontroller or FPGA evaluation board (Host side). This project was designed for educational purposes, thus it only serves as an interface between the peripherals (e.g. LCD display, 7-segment displays, matrix keypad, and so on) and an host unit (&mu;C, FPGA, computer, and others). No programming/debugging nor voltage regulation units are considered. Moreover, the drivers for peripherals are not includes since these are meant to be softcoded by you and programmed on the host unit side. 
 

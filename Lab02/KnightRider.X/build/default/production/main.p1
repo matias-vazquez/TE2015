@@ -653,7 +653,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 76:     {
 {
 "78
-[; ;main.c: 78:         char pos = 1;
+[; ;main.c: 78:         char pos = 0x01;
 [v _pos `uc ~T0 @X0 1 a ]
 [e = _pos -> -> 1 `i `uc ]
 "79

@@ -7,6 +7,8 @@
 
 ## **Laboratory 2. PIC18 and MPLAB basics**
 
+
+
 ## **Pre-lab Work**
 Before our lab session it is required that you install the development tools we will use; this include _MPLAB X_, which is Microchip's integrated development environment (IDE). As we will write C code for an 8-bit microcontroller (&mu;C) architecture, we also require to install the corresponding Microchip's C compiler, so called _XC8_. We will also make use of a plugin that will help us generate configuration code in a straightfoward way, which is called MPLAB Code Configurator (MCC). Finally, we will use GitHub for version control of our PIC18 coding projects. 
 
@@ -182,22 +184,57 @@ Connect RB0 on your Curiosity board to one of the LEDs on your XBR board. Connec
 
 For your referemce. the complete MPLAB BlinkLED project can be found here or as part of the file set of the current folder as ``BlinkLED.X``
 
-### __PART 2: MAKE THE KNIGHT RIDER SEQUENCE__
-Now that you know how to create a project and generate the configuration files using MCC, create a project named "KnightRider" and write the C code to drive 8 LEDs to produce the Knight Rider effect.
+### __PART 2: CODE THE KNIGHT RIDER SEQUENCE__
+Now that you know how to create a project and generate the configuration files using MCC, you will practice with a new project called _The Knight Rider_, which will make use of 8 LEDs and the 8 bits of Port B from your &mu;C. The Knight Rider sequence is a LED driving sequence that switches on a series of LEDs one after the other in one direction, and the the last LED is reached, it turns back to the opposite direction, as seen below. This sequence was used in an old TV show called the Knight Raider, hence its name. 
 
 <div align="center">
    <img src="img/KnightRider.gif">
 </div>
 
-Use Port B to drive the 8 LEDs on your XBR board as the knight rider sequence. Set a 50 ms delay for each LED.
+Create a project named "KnightRider" and configure your &mu;C using MCC with the following parameters for the clock signal: 
 
-### __PART 3: DESIGN A TURN LIGHTS LED DRIVER__
-Create one more project called "MustangSeqTurn"
+__SYSTEM MODULE__
+   * Oscillator Select: ``Internal oscillator``
+   * System Clock Select: ``FOSC``
+   * Internal Clock: ``31.5KHz_LFINTOSC``
+
+__PIN MODULE__
+
+Select all 8 bits of Port B as outputs and uncheck the Analog box. Name Port B bits from RB0 to RB7 as KR0 to KR7, respectively. The setup should look similar to the iamge below:
 
 <div align="center">
-   <a href="https://www.youtube.com/watch?v=jIjY7mERBrw">
-   <img src="https://img.youtube.com/vi/jIjY7mERBrw/0.jpg">
-   </a>
+   <img src="img/KR_MCC_PinModule.png">
 </div>
+
+Generate the configuration code and open the Projects tab to see the project files. Under Source Files, open ``main.c``. After the ``#include`` directives, add a new definition to set a delay value of 50 ms to a parameters named ``step``:
+```c
+#define step 50
+```
+Then, locate the ``while (1)`` loop inside the ``main(void)`` function. After the ``//Add your application code`` line comment, add the following code:
+
+```c
+char pos = 0x01;        // HEX value for 00000001b
+char i;                 // Index variable
+for (i=0; i<7; i++){    // Drive the first 7 LEDs from right to left
+   LATB = pos;          // Port B = 00000001 (turn on the first LED)
+   __delay_ms(step);    // Wait for value in step (in ms)
+   pos = pos<<1;        // Left shift value in 'pos' 1 bit (00000010)
+}
+for (i=7; i>0; i--){    // Drive from LED 8 to LED 1 from left to right
+   LATB = pos;          // Port B = 10000000 (turn on the last LED)
+   __delay_ms(step);    // Wait for value in step (in ms)
+   pos = pos>>1;        // Right shift value in 'pos' 1 bit (01000000)
+}
+```
+Build your project and program the microcontroller. Also wire Port B on your Curiosity board to the 8 LEDs on your expansion board. You should see the Knight Rider sequence running through the LEDs on your board.
+
+### __PART 3: DESIGN A TURN LIGHTS LED DRIVER__
+At this point, you are able to create a project in MPLAB X and make basic configurations using MCC. In this last exercise, you will practice what have you learned by coding a simple 8-LED sequence similar to the onw shown below. 
+
+<div align="center">
+   <img src="img/Mustang.gif">
+</div>
+
+Create a new project and name it _Mustang_. Configure your &mu;C as you did on the previous exercise and write the C code to drive the 8 LEDs on you expansion board as seen in the previous animation. 
 
 ## __Deliverables__

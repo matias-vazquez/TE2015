@@ -75,17 +75,17 @@ void main(void)
     while (1)
     {
         // Add your application code
-        char pos = 1;
-        char i;
-        for (i=0; i<7; i++){
-            LATB = pos;
-            __delay_ms(step);
-            pos = pos<<1;
+        char pos = 0x01;        // HEX value for 00000001b
+        char i;                 // Index variable
+        for (i=0; i<7; i++){    // Drive the first 7 LEDs from right to left
+            LATB = pos;         // Port B = 00000001 (turn on the first LED)
+            __delay_ms(step);   // Wait for value in step (in ms)
+            pos = pos<<1;       // Left shift value in 'pos' 1 bit (00000010)
         }
-        for (i=7; i>0; i--){
-            LATB = pos;
-            __delay_ms(step);
-            pos = pos>>1;
+        for (i=7; i>0; i--){    // Drive from LED 8 to LED 1 from left to right
+            LATB = pos;         // Port B = 10000000 (turn on the last LED)
+            __delay_ms(step);   // Wait for value in step (in ms)
+            pos = pos>>1;       // Right shift value in 'pos' 1 bit (01000000)
         }
     }
 }

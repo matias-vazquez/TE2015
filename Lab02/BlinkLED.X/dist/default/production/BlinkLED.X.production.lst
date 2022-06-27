@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Fri Jun 24 14:54:42 2022
+                                                                                               Mon Jun 27 14:50:45 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	18F45K50
@@ -66,18 +66,18 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
     52  0000                     _TRISC	set	3988
     53  0000                     _TRISB	set	3987
     54  0000                     _LATC	set	3979
-    55  0000                     _LATD	set	3980
-    56  0000                     _LATE	set	3981
-    57  0000                     _OSCTUNE	set	3995
-    58  0000                     _OSCCON2	set	4050
-    59  0000                     _OSCCON	set	4051
-    60  0000                     _LATB	set	3978
-    61  0000                     _ANSELA	set	3931
-    62  0000                     _ANSELB	set	3932
-    63  0000                     _ANSELC	set	3933
-    64  0000                     _ANSELD	set	3934
-    65  0000                     _LATA	set	3977
-    66  0000                     _LATBbits	set	3978
+    55  0000                     _LATB	set	3978
+    56  0000                     _LATBbits	set	3978
+    57  0000                     _ANSELA	set	3931
+    58  0000                     _ANSELB	set	3932
+    59  0000                     _ANSELC	set	3933
+    60  0000                     _ANSELD	set	3934
+    61  0000                     _LATA	set	3977
+    62  0000                     _LATD	set	3980
+    63  0000                     _LATE	set	3981
+    64  0000                     _OSCTUNE	set	3995
+    65  0000                     _OSCCON2	set	4050
+    66  0000                     _OSCCON	set	4051
     67  0000                     _INTCON2bits	set	4081
     68  0000                     _ACTCON	set	4021
     69  0000                     _TRISA	set	3986
@@ -150,7 +150,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    136  007F84                     
    137                           ;main.c: 52:     SYSTEM_Initialize();
    138  007F84  ECB4  F03F         	call	_SYSTEM_Initialize	;wreg free
-   139  007F88                     l768:
+   139  007F88                     l770:
    140  007F88  B08A               	btfsc	138,0,c	;volatile
    141  007F8A  EFC9  F03F         	goto	u11
    142  007F8E  EFCC  F03F         	goto	u10
@@ -178,7 +178,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    164  007FB2  2E01               	decfsz	??_main^0,f,c
    165  007FB4  D7FC               	bra	u27
    166  007FB6  F000               	nop	
-   167  007FB8  EFC4  F03F         	goto	l768
+   167  007FB8  EFC4  F03F         	goto	l770
    168  007FBC  EF00  F000         	goto	start
    169  007FC0                     __end_of_main:
    170                           	callstack 0
@@ -725,15 +725,15 @@ BITBANK6           100      0       0      16        0.0%
 BANK6              100      0       0      17        0.0%
 BITBANK7           100      0       0      18        0.0%
 BANK7              100      0       0      19        0.0%
-BITBIGSFRhhh         D      0       0      20        0.0%
-BITBIGSFRhhl        1D      0       0      21        0.0%
-BITBIGSFRhlhh       1C      0       0      22        0.0%
-BITBIGSFRhlhl       19      0       0      23        0.0%
-BITBIGSFRhllhh       4      0       0      24        0.0%
-BITBIGSFRhllhll      4      0       0      25        0.0%
-BITBIGSFRlhh         3      0       0      26        0.0%
-BITBIGSFRlhl        25      0       0      27        0.0%
-BITBIGSFRll          8      0       0      28        0.0%
+BITBIGSFRhh          D      0       0      20        0.0%
+BITBIGSFRhl         1D      0       0      21        0.0%
+BITBIGSFRlhh        1C      0       0      22        0.0%
+BITBIGSFRlhl        19      0       0      23        0.0%
+BITBIGSFRllhh        4      0       0      24        0.0%
+BITBIGSFRllhll       4      0       0      25        0.0%
+BITBIGSFRllllhh      3      0       0      26        0.0%
+BITBIGSFRllllhl     25      0       0      27        0.0%
+BITBIGSFRlllll       8      0       0      28        0.0%
 ABS                  0      0       0      29        0.0%
 BIGRAM             7FF      0       0      30        0.0%
 BIGSFR               0      0       0     200        0.0%
@@ -744,14 +744,14 @@ SFR                  0      0       0     200        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Fri Jun 24 14:54:42 2022
+Symbol Table                                                                                   Mon Jun 27 14:50:45 2022
 
-                            l31 7F70                              l34 7F82                              l73 7FFE  
+                            l15 7F70                              l18 7F82                              l57 7FFE  
                             u10 7F98                              u11 7F92                              u16 7F9A  
                             u27 7FAE                             l760 7FFC                             l752 7FC0  
-                           l762 7F72                             l754 7FD8                             l770 7FA8  
-                           l756 7FE2                             l764 7F68                             l758 7FE4  
-                           l766 7F84                             l768 7F88                             wreg 000FE8  
+                           l762 7F72                             l754 7FD8                             l770 7F88  
+                           l756 7FE2                             l764 7F68                             l772 7FA8  
+                           l758 7FE4                             l768 7F84                             wreg 000FE8  
                           _LATA 000F89                            _LATB 000F8A                            _LATC 000F8B  
                           _LATD 000F8C                            _LATE 000F8D                            _WPUB 000F85  
                           _main 7F84                            start 0000                    ___param_bank 000000  

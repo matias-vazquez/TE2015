@@ -8292,7 +8292,7 @@ void main(void)
     while (1)
     {
 
-        char pos = 1;
+        char pos = 0x01;
         char i;
         for (i=0; i<7; i++){
             LATB = pos;
