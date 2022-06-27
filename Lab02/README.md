@@ -1,15 +1,15 @@
-<table width="100%" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="left"><h1><b>TE2015 Microcontroladores</b></h1></td>
-    <td align="right"><img src="../img/teclogo.png" height="50"/></td>
-  </tr>
-</table>
+<p align="right">
+  <img src="../img/teclogo.png">
+</p>
 
-## **Laboratory 2. PIC18 and MPLAB basics**
+# **Laboratory 2. PIC18 and MPLAB basics**
 
+## **OBJECTIVES**
+* Create projects on MPLAB X
+* Set configuration bits using MPLAB Code Configurator
+* Drive LED strings using a port of the microcontroller
 
-
-## **Pre-lab Work**
+## **PRE-LAB WORK**
 Before our lab session it is required that you install the development tools we will use; this include _MPLAB X_, which is Microchip's integrated development environment (IDE). As we will write C code for an 8-bit microcontroller (&mu;C) architecture, we also require to install the corresponding Microchip's C compiler, so called _XC8_. We will also make use of a plugin that will help us generate configuration code in a straightfoward way, which is called MPLAB Code Configurator (MCC). Finally, we will use GitHub for version control of our PIC18 coding projects. 
 
 The following three sections will guide you with the installation and setup of all the required tools for our lab; so make sure you properly install everything before our lab session. 
@@ -54,16 +54,10 @@ Install a [Git Distribution](https://git-scm.com/download/win) in your computer.
 
 3. Clone TE2015 class repository on your computer.
 ```
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/matias-vazquez/TE2015.git
-git push -u origin main
+git clone https://github.com/matias-vazquez/TE2015.git
 ```
 
-## __Laboratory Procedure__
-### __PART 1: CREATE YOUR FIRST PROJECT: BLINKY LED__
+## __EXERCISE 1: CREATE YOUR FIRST PROJECT: BLINKY LED__
 
 1. Connect the Curiosity board to your PC.
 2. Start MPLAB X IDE. Go to *File -> New Project* and under *Categories*, select the *Microchip Embedded*; then, under *Projects* choose *Standalone Project*. Click *Next* to continue.
@@ -184,7 +178,7 @@ Connect RB0 on your Curiosity board to one of the LEDs on your XBR board. Connec
 
 For your referemce. the complete MPLAB BlinkLED project can be found here or as part of the file set of the current folder as ``BlinkLED.X``
 
-### __PART 2: CODE THE KNIGHT RIDER SEQUENCE__
+## __EXERCISE 2: THE KNIGHT RIDER SEQUENCE__
 Now that you know how to create a project and generate the configuration files using MCC, you will practice with a new project called _The Knight Rider_, which will make use of 8 LEDs and the 8 bits of Port B from your &mu;C. The Knight Rider sequence is a LED driving sequence that switches on a series of LEDs one after the other in one direction, and the the last LED is reached, it turns back to the opposite direction, as seen below. This sequence was used in an old TV show called the Knight Raider, hence its name. 
 
 <div align="center">
@@ -228,7 +222,7 @@ for (i=7; i>0; i--){    // Drive from LED 8 to LED 1 from left to right
 ```
 Build your project and program the microcontroller. Also wire Port B on your Curiosity board to the 8 LEDs on your expansion board. You should see the Knight Rider sequence running through the LEDs on your board.
 
-### __PART 3: DESIGN A TURN LIGHTS LED DRIVER__
+## __EXERCISE 3: MUSTANG's EMERGENCY LIGHTS__
 At this point, you are able to create a project in MPLAB X and make basic configurations using MCC. In this last exercise, you will practice what have you learned by coding a simple 8-LED sequence similar to the onw shown below. 
 
 <div align="center">
@@ -237,4 +231,26 @@ At this point, you are able to create a project in MPLAB X and make basic config
 
 Create a new project and name it _Mustang_. Configure your &mu;C as you did on the previous exercise and write the C code to drive the 8 LEDs on you expansion board as seen in the previous animation. 
 
-## __Deliverables__
+## __DELIVERABLES__
+1. Record a video (__3 minutes maximum__) showing your expansion board running exercises 1, 2 and 3 of this lab. It is mandatory that for each exercise, each team member explains one of the following three topics:
+   1. The code in ``main(void)`` function of ``main.c``
+   2. The configuration settings using MCC
+   3. The hardware setup
+Your video must be uploaded to your favorite video platform (YouTube, TikTok, Instagram, etc.) and you will only have to submitt the link to it the corresponding Canvas activity. __Make sure to set your video as Private, so only people with the link to it can watch it.__
+
+2. Push your complete MPLAB project folder on a GitHub repository and share the link on the comments section of your video post page. Consider that the Canvas activity corresponding to this laboratory will only allow external link entries, thus no other way of reporting your work is possible.
+
+3. Aswer the quiz on Canvas corresponding to Laboratory 2. This quiz is individual and you have three chances to get the maximum score as possible. This quiz is set to be available for three days after the lab session is carried out (_If the lab session finished Monday at 5 pm, quiz is due Thursday 5 pm_). __No extensions will be conceded__. 
+
+## __EVALUATION__ [![Generic badge](https://img.shields.io/badge/Submit-Laboratory_2-blue.svg?style=flat&logo=appveyor)](https://www.digikey.com.mx/es/articles/why-how-to-use-serial-peripheral-interface-simplify-connections-between-multiple-devices)
+
+<div align="center">
+
+| Deliverable | Weight |
+|---|---|
+| Demostrative video | 60% |
+| Source code        | 10% |
+| Individual quiz    | 30% |
+</div>
+
+___Note:__ Even though this laboratory is worked in teams, each member will be assigned an individual grade corresponding to their contribution to the demonstrative video, and their score on the individual quiz._
