@@ -14,14 +14,14 @@ Before our lab session it is required that you install the development tools we 
 
 The following three sections will guide you with the installation and setup of all the required tools for our lab; so make sure you properly install everything before our lab session. 
 
-## 1. MPLAB X IDE
+### 1. MPLAB X IDE
 1. Go to https://www.microchip.com/mplab/mplab-x-ide, scroll down to Downloads section and download the latest version of MPLAB X IDE
 2. Install it in your computer.
 
-## 2. XC8 COMPILER
+### 2. XC8 COMPILER
 Download it and install it from the official [Microchip Compilers website](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers).
 
-## 3. MPLAB'S CODE CONFIGURATOR
+### 3. MPLAB'S CODE CONFIGURATOR
 
 On MPLAB's upper toolbar you should see the MCC icon. If not, it is necessary to install the plugin. See image below for your reference: 
 <p align="center">
@@ -42,7 +42,7 @@ Once the installation is done, MPLAB will restart and you should see the Netbean
 
 You should see the MCC icon on the MPLAB upper bar now. 
 
-## 4. GITHUB
+### 4. GITHUB
 We will use GitHub to keep track of the development progress of our projects. With this, you will be able to store, share, generate reports, and more importantly, to go back to a previous version of your code in case you find your code messed up and difficult to correct.
 
 1. Create a GitHub account using your institute's e-mail.
