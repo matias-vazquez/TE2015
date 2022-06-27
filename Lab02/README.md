@@ -60,8 +60,8 @@ git remote add origin https://github.com/matias-vazquez/TE2015.git
 git push -u origin main
 ```
 
-## Laboratory Procedure
-### __CREATE YOUR FIRST PROJECT: BLINKY LED__
+## __Laboratory Procedure__
+### __PART 1: CREATE YOUR FIRST PROJECT: BLINKY LED__
 
 1. Connect the Curiosity board to your PC.
 2. Start MPLAB X IDE. Go to *File -> New Project* and under *Categories*, select the *Microchip Embedded*; then, under *Projects* choose *Standalone Project*. Click *Next* to continue.
@@ -88,6 +88,15 @@ git push -u origin main
    <img src="img/fig4.png">
 </div>
 
+6. On the project dashboard (bottom-left) corner of MPLAB X, look up for the Project Properties button (wrench icon at the foremost left of the window) and click it to open the Project Properties window. 
+
+7. Under ``Config:[default]``, open the dropdown menu under _Option Categories_ and select PKoB4 Tool Options. Make sure that ``Use low voltage programming mode entry`` is selected for the ``Programming mode entry`` field.
+
+_Note: The PKoB4 (PIC Kit on Board v4) is an on-board programming and debugging tool that is available in your Couriosity HPC board. See detailed information as well as documentation on the [PICKit 4 website](https://www.microchip.com/en-us/education/developer-help/learn-tools-software/programmers-debuggers/pickit4)._
+
+___
+
+
 6. Under *Tools → Embedded* select *MPLAB Code Configurator* to launch MCC (alternatively, you can just click the MCC icon con the toolbar).
 
 7. After loading the components, the MCC Content Manager Wizard will show up. Click *Select MCC Classic* to continue.
@@ -107,6 +116,14 @@ Leave everything as is and click *Finish*. After a few seconds of content downlo
 <div align="center">
    <img src="img/mcc_interface.png">
 </div>
+
+First off, we need to configure the clock signal the &mu;C will use. Click on _System Module_ on the Project Resources window. The ``INTERNAL OSCILLATOR`` windows will show up. Set the following parameters as follows:
+
+   * Oscillator Select: ``Internal oscillator``
+   * System Clock Select: ``FOSC``
+   * Internal Clock: ``31.5KHz_LFINTOSC``
+
+With this, we will use the 31.5 kHz internal oscillator as the clock signal. Leave the rest of settings as default. 
 
 On the Grid View of the Pin Manager, select PDIP40 under *Package* field to display on the Package View window, the proper &mu;C package that you are using. Here, you can see the pinout of your &mu;C. All the pins marked in blue are the general purpose pins that can be used for our projects. Locate RB0, as we will use it as an output pin to blink a LED on our XBR-1 board.
 
@@ -165,16 +182,16 @@ Connect RB0 on your Curiosity board to one of the LEDs on your XBR board. Connec
 
 For your referemce. the complete MPLAB BlinkLED project can be found here or as part of the file set of the current folder as ``BlinkLED.X``
 
-### __Self__
+### __PART 2: MAKE THE KNIGHT RIDER SEQUENCE__
 Now that you know how to create a project and generate the configuration files using MCC, create a project named "KnightRider" and write the C code to drive 8 LEDs to produce the Knight Rider effect.
 
 <div align="center">
-   <a href="https://www.youtube.com/watch?v=NS9FTyXQTmk">
-   <img src="https://img.youtube.com/vi/NS9FTyXQTmk/0.jpg">
-   </a>
+   <img src="img/KnightRider.gif">
 </div>
 
+Use Port B to drive the 8 LEDs on your XBR board as the knight rider sequence. Set a 50 ms delay for each LED.
 
+### __PART 3: DESIGN A TURN LIGHTS LED DRIVER__
 Create one more project called "MustangSeqTurn"
 
 <div align="center">
@@ -183,4 +200,4 @@ Create one more project called "MustangSeqTurn"
    </a>
 </div>
 
-### __Report__
+## __Deliverables__
