@@ -44,10 +44,10 @@ Type in the ASCII code of the caracter you want to display, either in hexadecima
   <img src="img/LCD_sim_char.gif">
 </p>
 
-Use this process to set up the LCD and display the team members' student number and first name. If you need to move to the second line for completion, use command ``0xC0`` to move the cursor to the first position of the second line.
+Use this process to set up the LCD using the commands of the initialization chain seen above, and display the student number of your team members. If you need to move to the second line for completion, use command ``0xC0`` to move the cursor to the first position of the second line.
 
 ## __EXERCISE 1: DISPLAY YOUR NAME AND STUDENT ID__
-1. Download file LCD_test.hex from this repository. You will program this file on your &mu;C to verify the proper functioning of your LCD by displaying a simple text message:
+1. Download file [LCD_test.hex](/Lab03/LCD_test.hex) from this repository. You will program this file on your &mu;C to verify the proper functioning of your LCD. The message that must be displaying on your LCD after programming is:
 
 <p align="center">
   <img src="img/msg1.png">
