@@ -21,8 +21,7 @@ Set Display Address     | 1 | A | A | A     | A     | A     | A     | A | 80 or 
 
 
 ## __EXERCISE 1: DISPLAY YOUR NAME AND STUDENT ID__
-1. Download file LCD_test.hex from the repository.
-
+1. Download file LCD_test.hex from this repository. This file will allow you to test the proper functioning of your LCD by displaying a simple text messagle once you program your &mu;C with it. 
 
 ## __EXERCISE 2: 8-BIT CALCULATOR__
 
